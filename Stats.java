@@ -4,8 +4,8 @@ public class Stats{
 		// max(a);
 		// min(a);
 		// mean(a);
-		median(a);
-		// quartile1
+		// median(a);
+		quartile1(a);
 		// quartile3
 		// mode
 		// standard deviation
@@ -39,12 +39,24 @@ public class Stats{
 		System.out.println(mean);
 	}
 	public static void median(int[] a){
-		int median = 0;
+		int length = 0;
+		double median = 0;
 		for (int i=0; i<a.length; i++) {
-			median = median + a[i];
-			
+			length++;
 		}
+		if((length % 2) ==0){
+			median = (a.length / 2) + 0.5;
+		}else{
+			median = a[length / 2];
+		} 
+		System.out.println(median);
 	}
+	public static void quartile1(int[] a){
+
+	}
+	// public static void quartile3(int[] a){
+
+	// }
 
 
 }
