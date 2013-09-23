@@ -3,8 +3,8 @@ public class Stats{
 		int[] a = {1, 2, 3, 4, 5};
 		// max(a);
 		// min(a);
-		mean(a);
-		// median
+		// mean(a);
+		median(a);
 		// quartile1
 		// quartile3
 		// mode
@@ -29,11 +29,21 @@ public class Stats{
 		System.out.println(min);
 	}
 	public static void mean(int[] a){
-		int mean = 0;
+		int total = 0;
+		double mean = 0;
 		for (int i=0; i<a.length; i++) {
-			mean = a[i+1];
+			total = total + a[i];
+			
 		}
-		System.out.println((mean) / 2);
+		mean = (total) / (a.length - 1);
+		System.out.println(mean);
+	}
+	public static void median(int[] a){
+		int median = 0;
+		for (int i=0; i<a.length; i++) {
+			median = median + a[i];
+			median
+		}
 	}
 
 
