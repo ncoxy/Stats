@@ -35,14 +35,14 @@ public class Stats{
 			total = total + a[i];
 			
 		}
-		mean = (total) / (a.length - 1);
+		mean = (total) / (a.length);
 		System.out.println(mean);
 	}
 	public static void median(int[] a){
 		int median = 0;
 		for (int i=0; i<a.length; i++) {
 			median = median + a[i];
-			median
+			
 		}
 	}
 
