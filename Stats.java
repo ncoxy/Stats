@@ -10,7 +10,7 @@ public class Stats{
 		// mode(a);
 		// standardDeviation(a);
 	}
-	public static int max(int[] a) {
+	public static double max(int[] a) {
 		int max = a[0];
 		for (int i=0; i<a.length; i++) {
 			if(a[i] > max) {
@@ -21,7 +21,7 @@ public class Stats{
 		return max;
 	}
 
-	public static int min(int[] a){
+	public static double min(int[] a){
 		int min = a[0];
 		for (int i=0; i<a.length; i++) {
 			if (a[i] < min) {
@@ -88,7 +88,7 @@ public class Stats{
 		System.out.println(quartile3);
 		return quartile3;
 	}
-	public static double mode(int[] a){
+	public static int mode(int[] a){
 		int counter = 0;
 		int maxCount = 0;
 		int large = 0;
