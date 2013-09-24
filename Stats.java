@@ -10,7 +10,7 @@ public class Stats{
 		// mode(a);
 		// standardDeviation(a);
 	}
-	public static double max(int[] a) {
+	public static int max(int[] a) {
 		int max = a[0];
 		for (int i=0; i<a.length; i++) {
 			if(a[i] > max) {
@@ -21,7 +21,7 @@ public class Stats{
 		return max;
 	}
 
-	public static double min(int[] a){
+	public static int min(int[] a){
 		int min = a[0];
 		for (int i=0; i<a.length; i++) {
 			if (a[i] < min) {
