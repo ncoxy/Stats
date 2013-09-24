@@ -89,16 +89,26 @@ public class Stats{
 		return quartile3;
 	}
 	public static double mode(int[] a){
-		int mode = 0;
-		int count = 0;
+		int maxCount = 0;
+		int counter = 0;
+		int large = 0;
 		for (int i=0; i<a.length; i++) {
-			if (a[i] == count) {
-					a[i] = count;
-				}else{
-
+			for(int j=a.length; j<=a[0]; j--){
+				if(a[i] == a[j]){
+					counter++;
 				}
+			}
+			if(counter > maxCount){
+				counter = maxCount;
+				large = a[i];
+			}
 			 
 		}
+		System.out.println(maxCount);
+		return maxCount;
+	}
+	public static double standDev(int[] a){
+		
 	}
 
 
