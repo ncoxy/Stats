@@ -1,16 +1,16 @@
 public class Stats{
 	public static void main(String[] args) {
-		int[] a = {1, 2, 3, 4, 5};
+		int[] a = {1, 2, 3, 3, 5,};
 		// max(a);
 		// min(a);
 		// mean(a);
 		// median(a);
-		quartile1(a);
-		// quartile3
-		// mode
+		// quartile1(a);
+		// quartile3(a);
+		mode(a);
 		// standard deviation
 	}
-	public static void max(int[] a) {
+	public static int max(int[] a) {
 		int max = a[0];
 		for (int i=0; i<a.length; i++) {
 			if(a[i] > max) {
@@ -18,8 +18,10 @@ public class Stats{
 			}			
 		}
 		System.out.println(max);
+		return max;
 	}
-	public static void min(int[] a){
+
+	public static int min(int[] a){
 		int min = a[0];
 		for (int i=0; i<a.length; i++) {
 			if (a[i] < min) {
@@ -27,8 +29,9 @@ public class Stats{
 			}
 		}
 		System.out.println(min);
+		return min;
 	}
-	public static void mean(int[] a){
+	public static double mean(int[] a){
 		int total = 0;
 		double mean = 0;
 		for (int i=0; i<a.length; i++) {
@@ -37,8 +40,9 @@ public class Stats{
 		}
 		mean = (total) / (a.length);
 		System.out.println(mean);
+		return mean;
 	}
-	public static void median(int[] a){
+	public static double median(int[] a){
 		int length = 0;
 		double median = 0;
 		for (int i=0; i<a.length; i++) {
@@ -50,13 +54,52 @@ public class Stats{
 			median = a[length / 2];
 		} 
 		System.out.println(median);
+		return median;
 	}
-	public static void quartile1(int[] a){
+	public static double quartile1(int[] a){
+		double quartile1 = 0;
+		int length = 0;
+		// double median = median(a);
+		for (int i=0; i<a.length; i++) {
+			length++;
 
+		}
+		if((length % 2) ==0){
+			quartile1 = a[length - 1] / 4 + 0.5;
+		}else{
+			quartile1 = a[length - 1]  / 4;
+		}
+		System.out.println(quartile1);
+		return quartile1;
 	}
-	// public static void quartile3(int[] a){
+	public static void quartile3(int[] a){
+		double quartile3 = 0;
+		int length = 0;
+		// double median = median(a);
+		for (int i=0; i<a.length; i++) {
+			length++;
 
-	// }
+		}
+		if((length % 2) ==0){
+			quartile3 = a[length - 1] / 4 + 0.5;
+		}else{
+			quartile3 = a[length - 1]  / 4;
+		}
+		System.out.println(quartile3);
+		return quartile3;
+	}
+	public static double mode(int[] a){
+		int mode = 0;
+		int count = 0;
+		for (int i=0; i<a.length; i++) {
+			if (a[i] == count) {
+					a[i] = count;
+				}else{
+
+				}
+			 
+		}
+	}
 
 
 }
